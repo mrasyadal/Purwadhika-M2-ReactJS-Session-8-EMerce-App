@@ -1,7 +1,64 @@
 import React from "react";
 import ProductCard from "../components/ProductCard";
+import Axios from "axios";
+import { API_URL } from "../constants/API";
 
 class Home extends React.Component {
+	state = {
+		productList: [],
+		page: 1,
+		itemPerPage: 9,
+		maxPage: 0,
+	};
+
+	fetchProducts = () => {
+		Axios.get(`${API_URL}/products`)
+			.then((result) => {
+				this.setState({
+					productList: result.data,
+					maxPage: Math.ceil(result.data.length / this.state.itemPerPage),
+				});
+			})
+			.catch((err) => {
+				alert(`Terjadi kesalahan di server`);
+			});
+	};
+
+	componentDidMount() {
+		this.fetchProducts();
+	}
+
+	nextPageHandler = () => {
+		if (this.state.page < this.state.maxPage) {
+			this.setState({ page: this.state.page + 1 });
+		}
+	};
+
+	prevPageHandler = () => {
+		if (this.state.page > 1) {
+			this.setState({ page: this.state.page - 1 });
+		}
+	};
+
+	renderProducts = () => {
+		const beginningIndex = (this.state.page - 1) * this.state.itemPerPage;
+		const currentData = this.state.productList.slice(
+			beginningIndex,
+			beginningIndex + this.state.itemPerPage
+		);
+
+		return currentData.map((val) => {
+			return <ProductCard productData={val} />;
+		});
+
+		// Code di bawah berlaku sebelum M2S8C6: Pagination
+		// return this.state.productList.map((val) => {
+		// 	// `val` berupa object dta suatu product
+		// 	return <ProductCard productData={val} />;
+		// 	// passing data ke product card bukan dengan parameter karena berbeda file, namun dengan props karena `ProductCard` adalah child dari `Home.jsx`
+		// });
+	};
+
 	render() {
 		return (
 			<div className="container mt-5">
@@ -53,9 +110,21 @@ class Home extends React.Component {
 						</div>
 						<div className="mt-3">
 							<div className="d-flex flex-row justify-content-between align-items-center">
-								<button className="btn btn-dark">{"<"}</button>
-								<div className="text-center">Page 1 of 8</div>
-								<button className="btn btn-dark">{">"}</button>
+								<button
+									className="btn btn-dark"
+									onClick={this.prevPageHandler}
+									disabled={this.state.page === 1}>
+									{"<"}
+								</button>
+								<div className="text-center">
+									Page {this.state.page} of {this.state.maxPage}
+								</div>
+								<button
+									className="btn btn-dark"
+									onClick={this.nextPageHandler}
+									disabled={this.state.page === this.state.maxPage}>
+									{">"}
+								</button>
 							</div>
 						</div>
 					</div>
@@ -63,7 +132,8 @@ class Home extends React.Component {
 					<div className="col-9">
 						<div className="d-flex flex-row flex-wrap">
 							{/* flex-wrap untuk nampilin card yang dibatasi oleh besar page/windows user */}
-							<ProductCard />
+							{/* render product here: me-render product dari `state.productList` */}
+							{this.renderProducts()}
 						</div>
 					</div>
 				</div>

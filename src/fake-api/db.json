@@ -45,9 +45,97 @@
 		{
 			"id": 1,
 			"productName": "Hamster Campbell",
-			"price": 25.0,
+			"price": 10000,
 			"productImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.mWJoHtNu7NA7NVco9wf4owHaHa%26pid%3DApi&f=1",
 			"description": "Hamster 3 bulan, peranakan bagus",
+			"category": "Hewan"
+		},
+		{
+			"id": 2,
+			"productName": "Hamster Winter White",
+			"price": 20000,
+			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+			"description": "Hamster 5 bulan",
+			"category": "Hewan"
+		},
+		{
+			"id": 3,
+			"productName": "Hamster Winter White",
+			"price": 30000,
+			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+			"description": "Hamster 5 bulan",
+			"category": "Hewan"
+		},
+		{
+			"id": 4,
+			"productName": "Hamster Winter White",
+			"price": 40000,
+			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+			"description": "Hamster 5 bulan",
+			"category": "Hewan"
+		},
+		{
+			"id": 5,
+			"productName": "Hamster Winter White",
+			"price": 50000,
+			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+			"description": "Hamster 5 bulan",
+			"category": "Hewan"
+		},
+		{
+			"id": 6,
+			"productName": "Hamster Winter White",
+			"price": 60000,
+			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+			"description": "Hamster 5 bulan",
+			"category": "Hewan"
+		},
+		{
+			"id": 7,
+			"productName": "Hamster Winter White",
+			"price": 70000,
+			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+			"description": "Hamster 5 bulan",
+			"category": "Hewan"
+		},
+		{
+			"id": 8,
+			"productName": "Hamster Winter White",
+			"price": 80000,
+			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+			"description": "Hamster 5 bulan",
+			"category": "Hewan"
+		},
+		{
+			"id": 9,
+			"productName": "Hamster Winter White",
+			"price": 90000,
+			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+			"description": "Hamster 5 bulan",
+			"category": "Hewan"
+		},
+		{
+			"id": 10,
+			"productName": "Hamster Winter White",
+			"price": 100000,
+			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+			"description": "Hamster 5 bulan",
+			"category": "Hewan"
+		},
+		{
+			"id": 11,
+			"productName": "Hamster Winter White",
+			"price": 110000,
+			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+			"description": "Hamster 5 bulan",
+			"category": "Hewan"
+		},
+		{
+			"id": 12,
+			"productName": "Hamster Winter White",
+			"price": 120000,
+			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+			"description": "Hamster 5 bulan",
 			"category": "Hewan"
 		}
 	],
