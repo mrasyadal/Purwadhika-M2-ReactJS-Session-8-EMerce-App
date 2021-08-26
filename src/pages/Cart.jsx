@@ -3,8 +3,34 @@ import React from "react";
 class Cart extends React.Component {
 	render() {
 		return (
-			<div>
-				<h1>Cart Page</h1>
+			<div className="p-5">
+				<div className="row">
+					<div className="col-12 text-center">
+						<h1>Cart</h1>
+						<table className="table mt-4">
+							<thead className="thead-light">
+								<tr>
+									<th>Name</th>
+									<th>Price</th>
+									<th>Image</th>
+									<th>Quantity</th>
+									<th>Category</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<td>data</td>
+							</tbody>
+							<tfoot className="bg-light">
+								<tr>
+									<td colspan="6">
+										<button className="btn btn-success">Checkout</button>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
 			</div>
 		);
 	}

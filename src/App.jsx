@@ -44,7 +44,7 @@ class App extends React.Component {
 						<Route component={Admin} path="/admin" />
 						<Route component={Cart} path="/cart" />
 						<Route component={History} path="/history" />
-						<Route component={ProductDetail} path="/product-detail" />
+						<Route component={ProductDetail} path="/product-detail/:productId" />
 						<Route component={Home} path="/" />
 					</Switch>
 				</BrowserRouter>

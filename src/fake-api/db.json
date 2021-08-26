@@ -38,6 +38,14 @@
 			"password": "kosong",
 			"role": "user",
 			"id": 5
+		},
+		{
+			"fullName": "Super Admin",
+			"username": "superadmin",
+			"email": "admin@admin.com",
+			"password": "admin",
+			"role": "admin",
+			"id": 6
 		}
 	],
 	"transactions": [],
@@ -115,19 +123,11 @@
 			"category": "Hewan"
 		},
 		{
-			"id": 10,
-			"productName": "Hamster Winter White",
-			"price": 100000,
-			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Hamster 5 bulan",
-			"category": "Hewan"
-		},
-		{
 			"id": 11,
 			"productName": "Hamster Winter White",
 			"price": 110000,
 			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Hamster 5 bulan",
+			"description": "Berumur 7 bulan",
 			"category": "Hewan"
 		},
 		{
@@ -137,6 +137,30 @@
 			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
 			"description": "Hamster 5 bulan",
 			"category": "Hewan"
+		},
+		{
+			"productName": "Kucing Maine-coon",
+			"price": 250000,
+			"productImage": "https://thumbs.dreamstime.com/b/maine-coon-1-year-old-13667290.jpg",
+			"description": "1 tahun",
+			"category": "Hewan",
+			"id": 13
+		},
+		{
+			"productName": "Kucing Maine-Coon",
+			"price": 600000,
+			"productImage": "https://thumbs.dreamstime.com/b/maine-coon-1-year-old-13667290.jpg",
+			"description": "1 tahun",
+			"category": "Hewan",
+			"id": 14
+		},
+		{
+			"productName": "Kaos UFC Khabib Nurmagomedov",
+			"price": 550000,
+			"productImage": "https://cdn.shopify.com/s/files/1/0035/4274/5152/products/UFCPMT0044_Z_KHABIB_NURMAGOMEDOV_02bfe9e2-8fc0-4c07-a0c4-f1ac579ea0ad.jpg?v=1549575674",
+			"description": "Barang baru",
+			"category": "Kaos",
+			"id": 15
 		}
 	],
 	"carts": []

@@ -6,9 +6,13 @@ import { API_URL } from "../constants/API";
 class Home extends React.Component {
 	state = {
 		productList: [],
+		filteredProductList: [],
 		page: 1,
-		itemPerPage: 9,
+		itemPerPage: 6,
 		maxPage: 0,
+		searchProductName: "",
+		searchCategory: "",
+		sortBy: "",
 	};
 
 	fetchProducts = () => {
@@ -17,6 +21,7 @@ class Home extends React.Component {
 				this.setState({
 					productList: result.data,
 					maxPage: Math.ceil(result.data.length / this.state.itemPerPage),
+					filteredProductList: result.data,
 				});
 			})
 			.catch((err) => {
@@ -37,15 +42,73 @@ class Home extends React.Component {
 	prevPageHandler = () => {
 		if (this.state.page > 1) {
 			this.setState({ page: this.state.page - 1 });
+			// setelah di-`setState`, page akan otomatis memanggil render()
 		}
+	};
+
+	inputHandler = (event) => {
+		const name = event.target.name;
+		const value = event.target.value;
+
+		this.setState({ [name]: value });
+	};
+
+	searchButtonHandler = () => {
+		// `filteredProductList` digunakan untuk menyimpan hasil filter
+		const filteredProductList = this.state.productList.filter((val) => {
+			return (
+				val.productName.toLowerCase().includes(this.state.searchProductName.toLowerCase()) &&
+				val.category.toLowerCase().includes(this.state.searchCategory.toLocaleLowerCase())
+			);
+		});
+
+		let searchPage = 0;
+		if (filteredProductList.length) {
+			searchPage = 1;
+		}
+
+		this.setState({
+			page: searchPage, // balik ke page 1, atau page 0 kalau hasil search kosong
+			filteredProductList,
+			maxPage: Math.ceil(filteredProductList.length / this.state.itemPerPage),
+		});
 	};
 
 	renderProducts = () => {
 		const beginningIndex = (this.state.page - 1) * this.state.itemPerPage;
-		const currentData = this.state.productList.slice(
-			beginningIndex,
-			beginningIndex + this.state.itemPerPage
-		);
+		let rawData = [...this.state.filteredProductList];
+
+		const compareString = (a, b) => {
+			if (a.productName > b.productName) {
+				return 1;
+			} else if (a.productName < b.productName) {
+				return -1;
+			} else return 0;
+		};
+
+		switch (this.state.sortBy) {
+			case "lowPrice":
+				rawData.sort((a, b) => a.price - b.price);
+				// ketika hasil operasi di atas negatif, urutan tidak berubah
+				break;
+			case "highPrice":
+				rawData.sort((a, b) => b.price - a.price);
+				break;
+			case "az":
+				rawData.sort((a, b) => compareString(a, b));
+				break;
+			case "za":
+				rawData.sort((a, b) => compareString(b, a));
+				break;
+			default:
+				rawData = [...this.state.filteredProductList];
+				break;
+		}
+
+		const currentData = rawData.slice(beginningIndex, beginningIndex + this.state.itemPerPage);
+		// `rawData` adalah list barang yang sudah di-filter (bisa saja diberlakukan filter kosong sehingga tidak ada perubahan)
+		// `filteredProductList` bisa digunakan di sini walaupun user tidak memfilter hasil -> obsolete sejak M2S8C9: Sorting Products
+		// karena isi awal filteredProductList diset di Axios.get dengan nilai productList itu sendiri sbg default value
 
 		return currentData.map((val) => {
 			return <ProductCard productData={val} />;
@@ -78,16 +141,20 @@ class Home extends React.Component {
 									type="text"
 									name="searchProductName"
 									className="form-control mb-3"
+									onChange={this.inputHandler}
 								/>
 								<label htmlFor="searchCategory" className="mb-2">
 									Product Category
 								</label>
-								<select name="searchCategory" className="form-select" caret>
+								<select onChange={this.inputHandler} name="searchCategory" className="form-select">
 									<option value="">All items</option>
-									<option value="">Kaos</option>
-									<option value="">Celana</option>
-									<option value="">Hewan</option>
+									<option value="Kaos">Kaos</option>
+									<option value="Celana">Celana</option>
+									<option value="Hewan">Hewan</option>
 								</select>
+								<button className="btn btn-primary mt-3" onClick={this.searchButtonHandler}>
+									Search
+								</button>
 							</div>
 						</div>
 						{/* card 2 */}
@@ -96,24 +163,21 @@ class Home extends React.Component {
 								<strong>Sort Products</strong>
 							</div>
 							<div className="card-body">
-								<label htmlFor="searchCategory" className="mb-2">
+								<label htmlFor="sortBy" className="mb-2">
 									Sort by
 								</label>
-								<select name="searchCategory" className="form-select">
+								<select onChange={this.inputHandler} name="sortBy" className="form-select">
 									<option value="">Default</option>
-									<option value="">Lowest Price</option>
-									<option value="">Highest Price</option>
-									<option value="">A-Z</option>
-									<option value="">Z-A</option>
+									<option value="lowPrice">Lowest Price</option>
+									<option value="highPrice">Highest Price</option>
+									<option value="az">A-Z</option>
+									<option value="za">Z-A</option>
 								</select>
 							</div>
 						</div>
 						<div className="mt-3">
 							<div className="d-flex flex-row justify-content-between align-items-center">
-								<button
-									className="btn btn-dark"
-									onClick={this.prevPageHandler}
-									disabled={this.state.page === 1}>
+								<button className="btn btn-dark" onClick={this.prevPageHandler} disabled={this.state.page <= 1}>
 									{"<"}
 								</button>
 								<div className="text-center">
