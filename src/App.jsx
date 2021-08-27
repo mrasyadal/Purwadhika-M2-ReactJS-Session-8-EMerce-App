@@ -13,6 +13,7 @@ import MyNavbar from "./components/MyNavbar";
 
 import { connect } from "react-redux";
 import { userKeepLogin, checkStorage } from "./redux/actions/user";
+import { getCartData } from "./redux/actions/cart"; // ditambah di M2S8C11
 
 class App extends React.Component {
 	componentDidMount() {
@@ -25,6 +26,9 @@ class App extends React.Component {
 
 			// panggil fungsi userKeepLogin
 			this.props.userKeepLogin(userData);
+
+			// mendapatkan informasi cart dari user yang login (apabila ada user yg login) M2S8C11
+			this.props.getCartData(userData.id);
 		} else {
 			// kalau `userLocalStorage` belum ada isinya, `type: "USER_LOGIN"` belum ter-trigger yang mengakibatkan belum terubahnya storageIsChecked menjadi true
 			this.props.checkStorage();
@@ -69,6 +73,7 @@ const mapDispatchToProps = {
 	// udah ga pake handler
 	userKeepLogin,
 	checkStorage,
+	getCartData,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -53,8 +53,8 @@ export const loginUser = ({ username, password }) => {
 					if (password === result.data[0].password) {
 						// ngebuat data login tersimpan di localStorage apabila password benar
 						delete result.data[0].password;
-						// prettier-ignore
-						localStorage.setItem("userDataEmmerce", JSON.stringify(result.data[0]))
+
+						localStorage.setItem("userDataEmmerce", JSON.stringify(result.data[0]));
 
 						dispatch({
 							type: "USER_LOGIN",

@@ -20,8 +20,8 @@ class Home extends React.Component {
 			.then((result) => {
 				this.setState({
 					productList: result.data,
+					filteredProductList: result.data, // placeholder agar isi result.data dapat diubah2
 					maxPage: Math.ceil(result.data.length / this.state.itemPerPage),
-					filteredProductList: result.data,
 				});
 			})
 			.catch((err) => {
@@ -58,10 +58,11 @@ class Home extends React.Component {
 		const filteredProductList = this.state.productList.filter((val) => {
 			return (
 				val.productName.toLowerCase().includes(this.state.searchProductName.toLowerCase()) &&
-				val.category.toLowerCase().includes(this.state.searchCategory.toLocaleLowerCase())
+				val.category.toLowerCase().includes(this.state.searchCategory.toLowerCase())
 			);
 		});
 
+		// menentukan jumlah halaman dari produk2 hasil filter
 		let searchPage = 0;
 		if (filteredProductList.length) {
 			searchPage = 1;

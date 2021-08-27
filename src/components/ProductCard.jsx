@@ -6,10 +6,14 @@ class ProductCard extends React.Component {
 	render() {
 		return (
 			<div className="card product-card">
+				{/* `productData` adalah props dari Home.jsx */}
 				<img src={this.props.productData.productImage} alt="" />
 				<div className="mt-2">
 					<div>
-						<Link to="/product-detail" style={{ textDecoration: "none", color: "inherit" }}>
+						<Link
+							to={`/product-detail/${this.props.productData.id}`}
+							style={{ textDecoration: "none", color: "inherit" }}
+							className="font-weight-bold">
 							<h6>{this.props.productData.productName}</h6>
 						</Link>
 						<span className="text-muted">Rp {this.props.productData.price.toLocaleString("id")}</span>

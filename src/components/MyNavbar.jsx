@@ -20,7 +20,11 @@ class MyNavbar extends React.Component {
 			<div>
 				<Navbar color="light" light>
 					{/* `color` dan `light` adalah props */}
-					<NavbarBrand className="mx-3">Emmerce</NavbarBrand>
+					<NavbarBrand className="mx-3">
+						<Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+							Emmerce
+						</Link>
+					</NavbarBrand>
 					<Nav>
 						{/* conditional untuk nentuin udah login atau belum */}
 						{/* kalau sudah: full menu unlocked */}
@@ -29,9 +33,7 @@ class MyNavbar extends React.Component {
 							<>
 								<NavItem style={{ marginTop: "8px" }}>
 									{/* kalau mau ngatur margin, atur di NavItem sebagai parentnya */}
-									<NavbarText>
-										Hello, {this.props.userGlobal.username}!
-									</NavbarText>
+									<NavbarText>Hello, {this.props.userGlobal.username}!</NavbarText>
 								</NavItem>
 								<UncontrolledDropdown nav>
 									{/* `nav` dan `inNavbar` adalah props. `inNavbar` menandakan tag ini ada di dalam nav */}
@@ -41,7 +43,7 @@ class MyNavbar extends React.Component {
 									</DropdownToggle>
 									<DropdownMenu right>
 										<DropdownItem>
-											<Link to="/cart">Cart</Link>
+											<Link to="/cart">Cart ({this.props.cartGlobal.cartList.length})</Link>
 										</DropdownItem>
 										<DropdownItem>
 											<Link to="/history">History</Link>
@@ -68,8 +70,7 @@ class MyNavbar extends React.Component {
 							// ini adalah bagian else dari if ternary, ketika user belum login
 							<NavItem className="mx-3 ">
 								<NavbarText>
-									<Link to="/login">Login</Link> |{" "}
-									<Link to="/register">Register</Link>
+									<Link to="/login">Login</Link> | <Link to="/register">Register</Link>
 								</NavbarText>
 							</NavItem>
 						)}
@@ -85,6 +86,7 @@ const mapStateToProps = (state) => {
 		userGlobal: state.user,
 		// ga pakai `this.state` karena `state` tidak berasal dari page ini
 		// pakai `.user` di `state.user` karena yang diexport dari /reducers/index.js adalah `combineReducers` dengan field/property/key bernama `user`
+		cartGlobal: state.cart,
 	};
 };
 

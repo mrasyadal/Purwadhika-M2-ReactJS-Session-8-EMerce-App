@@ -1,167 +1,195 @@
 {
-	"users": [
-		{
-			"fullName": "Apa",
-			"username": "Ini",
-			"email": "Apa@ini.com",
-			"password": "12345",
-			"id": 1
-		},
-		{
-			"fullName": "Nakiri",
-			"username": "Souma",
-			"email": "Honk123@naver.com",
-			"password": "password",
-			"role": "user",
-			"id": 2
-		},
-		{
-			"fullName": "LiSA",
-			"username": "lisa",
-			"email": "lisa@yt.com",
-			"password": "lagu-lagu",
-			"role": "user",
-			"id": 3
-		},
-		{
-			"fullName": "Full Name",
-			"username": "Username",
-			"email": "email@email.com",
-			"password": "Password",
-			"role": "user",
-			"id": 4
-		},
-		{
-			"fullName": "Kosong",
-			"username": "Kosong",
-			"email": "kosong@kosong.com",
-			"password": "kosong",
-			"role": "user",
-			"id": 5
-		},
-		{
-			"fullName": "Super Admin",
-			"username": "superadmin",
-			"email": "admin@admin.com",
-			"password": "admin",
-			"role": "admin",
-			"id": 6
-		}
-	],
-	"transactions": [],
-	"products": [
-		{
-			"id": 1,
-			"productName": "Hamster Campbell",
-			"price": 10000,
-			"productImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.mWJoHtNu7NA7NVco9wf4owHaHa%26pid%3DApi&f=1",
-			"description": "Hamster 3 bulan, peranakan bagus",
-			"category": "Hewan"
-		},
-		{
-			"id": 2,
-			"productName": "Hamster Winter White",
-			"price": 20000,
-			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Hamster 5 bulan",
-			"category": "Hewan"
-		},
-		{
-			"id": 3,
-			"productName": "Hamster Winter White",
-			"price": 30000,
-			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Hamster 5 bulan",
-			"category": "Hewan"
-		},
-		{
-			"id": 4,
-			"productName": "Hamster Winter White",
-			"price": 40000,
-			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Hamster 5 bulan",
-			"category": "Hewan"
-		},
-		{
-			"id": 5,
-			"productName": "Hamster Winter White",
-			"price": 50000,
-			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Hamster 5 bulan",
-			"category": "Hewan"
-		},
-		{
-			"id": 6,
-			"productName": "Hamster Winter White",
-			"price": 60000,
-			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Hamster 5 bulan",
-			"category": "Hewan"
-		},
-		{
-			"id": 7,
-			"productName": "Hamster Winter White",
-			"price": 70000,
-			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Hamster 5 bulan",
-			"category": "Hewan"
-		},
-		{
-			"id": 8,
-			"productName": "Hamster Winter White",
-			"price": 80000,
-			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Hamster 5 bulan",
-			"category": "Hewan"
-		},
-		{
-			"id": 9,
-			"productName": "Hamster Winter White",
-			"price": 90000,
-			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Hamster 5 bulan",
-			"category": "Hewan"
-		},
-		{
-			"id": 11,
-			"productName": "Hamster Winter White",
-			"price": 110000,
-			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Berumur 7 bulan",
-			"category": "Hewan"
-		},
-		{
-			"id": 12,
-			"productName": "Hamster Winter White",
-			"price": 120000,
-			"productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-			"description": "Hamster 5 bulan",
-			"category": "Hewan"
-		},
-		{
-			"productName": "Kucing Maine-coon",
-			"price": 250000,
-			"productImage": "https://thumbs.dreamstime.com/b/maine-coon-1-year-old-13667290.jpg",
-			"description": "1 tahun",
-			"category": "Hewan",
-			"id": 13
-		},
-		{
-			"productName": "Kucing Maine-Coon",
-			"price": 600000,
-			"productImage": "https://thumbs.dreamstime.com/b/maine-coon-1-year-old-13667290.jpg",
-			"description": "1 tahun",
-			"category": "Hewan",
-			"id": 14
-		},
-		{
-			"productName": "Kaos UFC Khabib Nurmagomedov",
-			"price": 550000,
-			"productImage": "https://cdn.shopify.com/s/files/1/0035/4274/5152/products/UFCPMT0044_Z_KHABIB_NURMAGOMEDOV_02bfe9e2-8fc0-4c07-a0c4-f1ac579ea0ad.jpg?v=1549575674",
-			"description": "Barang baru",
-			"category": "Kaos",
-			"id": 15
-		}
-	],
-	"carts": []
+  "users": [
+    {
+      "fullName": "Apa",
+      "username": "Ini",
+      "email": "Apa@ini.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "fullName": "Nakiri",
+      "username": "Souma",
+      "email": "Honk123@naver.com",
+      "password": "password",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "fullName": "LiSA",
+      "username": "lisa",
+      "email": "lisa@yt.com",
+      "password": "lagu-lagu",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "fullName": "Full Name",
+      "username": "Username",
+      "email": "email@email.com",
+      "password": "Password",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "fullName": "Kosong",
+      "username": "Kosong",
+      "email": "kosong@kosong.com",
+      "password": "kosong",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "fullName": "Super Admin",
+      "username": "superadmin",
+      "email": "admin@admin.com",
+      "password": "admin",
+      "role": "admin",
+      "id": 6
+    }
+  ],
+  "transactions": [],
+  "products": [
+    {
+      "id": 1,
+      "productName": "Hamster Campbell",
+      "price": 10000,
+      "productImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.mWJoHtNu7NA7NVco9wf4owHaHa%26pid%3DApi&f=1",
+      "description": "Hamster 3 bulan, peranakan bagus",
+      "category": "Hewan"
+    },
+    {
+      "id": 2,
+      "productName": "Hamster Winter White",
+      "price": 20000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "description": "Hamster 5 bulan",
+      "category": "Hewan"
+    },
+    {
+      "id": 3,
+      "productName": "Hamster Winter White",
+      "price": 30000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "description": "Hamster 5 bulan",
+      "category": "Hewan"
+    },
+    {
+      "id": 4,
+      "productName": "Hamster Winter White",
+      "price": 40000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "description": "Hamster 5 bulan",
+      "category": "Hewan"
+    },
+    {
+      "id": 5,
+      "productName": "Hamster Winter White",
+      "price": 50000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "description": "Hamster 5 bulan",
+      "category": "Hewan"
+    },
+    {
+      "id": 6,
+      "productName": "Hamster Winter White",
+      "price": 60000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "description": "Hamster 5 bulan",
+      "category": "Hewan"
+    },
+    {
+      "id": 7,
+      "productName": "Hamster Winter White",
+      "price": 70000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "description": "Hamster 5 bulan",
+      "category": "Hewan"
+    },
+    {
+      "id": 8,
+      "productName": "Hamster Winter White",
+      "price": 80000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "description": "Hamster 5 bulan",
+      "category": "Hewan"
+    },
+    {
+      "id": 9,
+      "productName": "Hamster Winter White",
+      "price": 90000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "description": "Hamster 5 bulan",
+      "category": "Hewan"
+    },
+    {
+      "id": 11,
+      "productName": "Hamster Winter White",
+      "price": 110000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "description": "Berumur 7 bulan",
+      "category": "Hewan"
+    },
+    {
+      "id": 12,
+      "productName": "Hamster Winter White",
+      "price": 120000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "description": "Hamster 5 bulan",
+      "category": "Hewan"
+    },
+    {
+      "productName": "Kucing Maine-coon",
+      "price": 250000,
+      "productImage": "https://thumbs.dreamstime.com/b/maine-coon-1-year-old-13667290.jpg",
+      "description": "1 tahun",
+      "category": "Hewan",
+      "id": 13
+    },
+    {
+      "productName": "Kucing Maine-Coon",
+      "price": 600000,
+      "productImage": "https://thumbs.dreamstime.com/b/maine-coon-1-year-old-13667290.jpg",
+      "description": "1 tahun",
+      "category": "Hewan",
+      "id": 14
+    },
+    {
+      "productName": "Kaos UFC Khabib Nurmagomedov",
+      "price": 550000,
+      "productImage": "https://cdn.shopify.com/s/files/1/0035/4274/5152/products/UFCPMT0044_Z_KHABIB_NURMAGOMEDOV_02bfe9e2-8fc0-4c07-a0c4-f1ac579ea0ad.jpg?v=1549575674",
+      "description": "Barang baru",
+      "category": "Kaos",
+      "id": 15
+    }
+  ],
+  "carts": [
+    {
+      "userId": 6,
+      "productId": 15,
+      "productName": "Kaos UFC Khabib Nurmagomedov",
+      "price": 550000,
+      "productImage": "https://cdn.shopify.com/s/files/1/0035/4274/5152/products/UFCPMT0044_Z_KHABIB_NURMAGOMEDOV_02bfe9e2-8fc0-4c07-a0c4-f1ac579ea0ad.jpg?v=1549575674",
+      "quantity": 5,
+      "id": 1
+    },
+    {
+      "userId": 6,
+      "productId": 5,
+      "productName": "Hamster Winter White",
+      "price": 50000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "quantity": 8,
+      "id": 2
+    },
+    {
+      "userId": 6,
+      "productId": 14,
+      "productName": "Kucing Maine-Coon",
+      "price": 600000,
+      "productImage": "https://thumbs.dreamstime.com/b/maine-coon-1-year-old-13667290.jpg",
+      "quantity": 3,
+      "id": 3
+    }
+  ]
 }

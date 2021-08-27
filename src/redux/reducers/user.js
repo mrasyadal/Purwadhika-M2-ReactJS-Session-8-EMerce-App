@@ -3,7 +3,7 @@ const init_state = {
 	fullName: "",
 	role: "",
 	id: 0,
-	errrMsg: "",
+	errMsg: "",
 	storageIsChecked: false,
 	// `storageIsChecked` diperlukan untuk fungsi lanjutan yang memerlukan data user untuk memanggil komponen lain sebelum user login
 };
