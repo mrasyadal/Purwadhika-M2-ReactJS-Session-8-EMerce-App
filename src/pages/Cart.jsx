@@ -41,6 +41,23 @@ class Cart extends React.Component {
 		});
 	};
 
+	renderTotalPrice = () => {
+		let total = 0;
+		for (let product of this.props.cartGlobal.cartList) {
+			total += product.price * product.quantity;
+		}
+		return (
+			<tr className="mt-3">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td className="align-middle font-weight-bold">Total Price</td>
+				<td className="text-end align-middle">Rp {total.toLocaleString("id")}</td>
+				<td></td>
+			</tr>
+		);
+	};
+
 	render() {
 		return (
 			<div className="p-5">
@@ -58,7 +75,10 @@ class Cart extends React.Component {
 									<th>Action</th>
 								</tr>
 							</thead>
-							<tbody>{this.renderCart()} </tbody>
+							<tbody>
+								{this.renderCart()}
+								{this.renderTotalPrice()}
+							</tbody>
 							<tfoot className="bg-light">
 								<tr>
 									<td colspan="6">

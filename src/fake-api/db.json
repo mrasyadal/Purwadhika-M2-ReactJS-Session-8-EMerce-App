@@ -179,17 +179,26 @@
       "productName": "Hamster Winter White",
       "price": 50000,
       "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
-      "quantity": 8,
+      "quantity": 9,
       "id": 2
     },
     {
       "userId": 6,
-      "productId": 14,
-      "productName": "Kucing Maine-Coon",
-      "price": 600000,
-      "productImage": "https://thumbs.dreamstime.com/b/maine-coon-1-year-old-13667290.jpg",
+      "productId": 1,
+      "productName": "Hamster Campbell",
+      "price": 10000,
+      "productImage": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.mWJoHtNu7NA7NVco9wf4owHaHa%26pid%3DApi&f=1",
       "quantity": 3,
-      "id": 3
+      "id": 4
+    },
+    {
+      "userId": 6,
+      "productId": 6,
+      "productName": "Hamster Winter White",
+      "price": 60000,
+      "productImage": "https://s3.ca-central-1.amazonaws.com/eleveurs-ca/user_ZoPza5yzkG/5147/Hamster-%C3%89lite.jpg",
+      "quantity": 1,
+      "id": 5
     }
   ]
 }
